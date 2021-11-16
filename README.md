@@ -15,39 +15,53 @@ def mat(row, coloumn):
 
     return x1
 
+
 Matrix1= mat(row, coloumn)
 print(Matrix1)
 print()
 Matrix2= mat(row, coloumn)
 print(Matrix2)
+# Program to add two matrices
+addition = []
+for i in range(row):
+    add = []
+    for j in range(coloumn):
+        result = Matrix1[i][j] + Matrix2[i][j]
+        add.append(result)
+    addition.append(add)
+print("addition =",addition)
 
-# Program to add two matrices using list 
-result = [[Matrix1[i][j] + Matrix2[i][j]  for j in range(len(Matrix1[0]))] for i in range(len(Matrix1))]
-print()
-print('Addition of Matrix1 and Matrix2 is: ')
-for r in result:
-    print(r)
+# Program to substracte two matrices 
+substraction = []
+for i in range(row):
+    sub = []
+    for j in range(coloumn):
+        result = Matrix1[i][j] - Matrix2[i][j]
+        sub.append(result)
+    substraction.append(sub)
+print("substraction =",substraction)
 
-# Program to substracte two matrices using list 
-result = [[Matrix1[i][j] - Matrix2[i][j]  for j in range(len(Matrix1[0]))] for i in range(len(Matrix1))]
-print()
-print('Substraction of Matrix1 and Matrix2 is: ')
-for r in result:
-    print(r)
-    
 #Program for transpose of matrix
-for r in range(row):
-    for c in range(coloumn):
-        result[c][r] = Matrix1[r][c]
-        result[c][r]=Matrix2[r][c]
-print()
-print("Transpose of Matrix1 is: ")
-for r in result:
-    print(r)
-print()
-print("Transpose of Matrix2 is: ")
-for r1 in result:
-    print(r1)
+transpose1=[]
+for i in range(row):
+    trans=[]
+    for j in range(coloumn):
+        result=Matrix1[j][i]
+        trans.append(result)
+    transpose1.append(trans)
+print("Transpose of matrix 1 =",transpose1)
+
+transpose2=[]
+for i in range(row):
+    trans=[]
+    for j in range(coloumn):
+        result=Matrix2[j][i]
+        trans.append(result)
+    transpose2.append(trans)
+print("Transpose of matrix 2 =",transpose2)
+
+
+
 
 
 
